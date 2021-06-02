@@ -32,10 +32,6 @@
   <div id="credit-card-view" class="formsection pxy-15">
     <form id="credit_card_form" class="mobile-view-form" action="" method="POST">
       <div class="mb-3">
-        <label class="form-label" for="camera_photo">Take a Photo</label>
-        <input type="file" accept="image/*" capture="camera" name="camera_photo" id="camera_photo" class="form-control" />
-      </div>
-      <div class="mb-3">
         <label class="form-label" for="selectSubsidiary">Subsidiary</label>
         <select id="selectSubsidiary" name="subsidiary" class="form-select" onChange="setUrl()" required>
           <option value="" selected disabled>Subsidiary</option>
@@ -87,6 +83,10 @@
         <select id="selectCategory" name="category" class="form-select" aria-label="Category">
           <option value="" selected disabled>Category</option>
         </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="camera_photo">Take a Photo</label>
+        <input type="file" accept="image/*" capture="camera" name="camera_photo" id="camera_photo" class="form-control form-control-lg" />
       </div>
       <div class="text-center mt-5">
         <button type="submit" class="btn w-100 color-One submit-btn py-2">Save</button>

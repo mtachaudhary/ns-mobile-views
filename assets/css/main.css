@@ -47,6 +47,10 @@ select.form-select {
     font-weight: 500;
 }
 
+.form-control[type=file] {
+    padding: .5rem 1rem;
+}
+
 input.form-control::placeholder {
     color: #8670707d;
 }
