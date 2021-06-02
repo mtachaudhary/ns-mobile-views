@@ -86,7 +86,8 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="camera_photo">Take a Photo</label>
-        <input type="file" accept="image/*" capture="camera" name="camera_photo" id="camera_photo" class="form-control form-control-lg" />
+        <input type="file" accept="image/*" capture="camera" name="camera_photo" id="camera_photo" class="form-control form-control-lg" onchange="previewFile()" />
+        <img src="" height="200" alt="Image preview...">
       </div>
       <div class="text-center mt-5">
         <button type="submit" class="btn w-100 color-One submit-btn py-2">Save</button>

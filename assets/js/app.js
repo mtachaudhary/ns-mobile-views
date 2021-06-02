@@ -798,3 +798,26 @@ function showNotification(message, type) {
     }
 
 }
+
+
+// File Handler
+function previewFile() {
+    const preview = document.querySelector('img');
+    const file = document.querySelector('input[type=file]').files[0];
+    console.log('file: ' + file);
+    const reader = new FileReader();
+    console.log('reader: ' + reader);
+
+    reader.addEventListener("load", function() {
+        // convert image file to base64 string
+        preview.src = reader.result;
+        console.log('result: ' + reader.result);
+    });
+
+    if (file) {
+        reader.readAsDataURL(file);
+        console.log('readAsDataURL: ' + reader.readAsDataURL(file));
+    }
+}
+
+previewFile();
