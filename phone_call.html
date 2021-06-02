@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phone Call</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Font asesome -->
+  <link href="assets/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Dismissible for notification -->
+  <div id="dismissible-container"></div>
+
+  <!-- Navbar start -->
+  <div class="header-bg pxy-15 color-One text-light">
+    <a href="index.html" id="menu-toggle" class="text-light">
+      <span class="fas fa-arrow-left"></span>
+    </a>
+    <span id="app-title" class="app-title ms-2">Phone Call</span>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- PHONE CALL VIEW Start-->
+  <div id="phone-view" class="formsection pxy-15">
+      <form id="phone_call_form" class="mobile-view-form" action="" method="POST">
+          <div class="mb-3">
+              <label class="form-label" for="selectCustomer">Customer</label>
+              <select id="selectCustomer" name="customer" class="form-select" aria-label="Customer" onChange="setUrl()" required>
+                <option value="" selected disabled>Customer</option>
+              </select>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="selectContact">Contact</label>
+              <select id="selectContact" name="contact" class="form-select" aria-label="Contact">
+                <option value="" selected disabled>Contact</option>
+              </select>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="selectOrganizer">Organizer</label>
+              <select id="selectOrganizer" name="organizer" class="form-select" aria-label="Organizer" required>
+                  <option value="" selected disabled>Organizer</option>
+              </select>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="subject">Subject</label>
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="selectCallStatus">Status</label>
+              <select id="selectCallStatus" name="status" class="form-select" aria-label="Status" required>
+                  <option value="" selected disabled>Status</option>
+              </select>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="phone_date">Date</label>
+              <input type="date" name="phone_date" id="phone_date" class="form-control" placeholder="2021-04-14" required>
+          </div>
+          <div class="text-center mt-5">
+              <button type="submit" class="btn w-100 color-One submit-btn py-2">Save</button>
+          </div>
+      </form>
+  </div>
+  <!-- PHONE CALL VIEW End-->
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/dismissible.js"></script>
+</body>
+
+</html>

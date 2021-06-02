@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Card Transaction</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Font asesome -->
+  <link href="assets/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Dismissible for notification -->
+  <div id="dismissible-container"></div>
+
+  <!-- Navbar start -->
+  <div class="header-bg pxy-15 color-One text-light">
+    <a href="index.html" id="menu-toggle" class="text-light">
+      <span class="fas fa-arrow-left"></span>
+    </a>
+    <span id="app-title" class="app-title ms-2">Credit Card Transaction</span>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- CREDIT CARD VIEW Start-->
+  <div id="credit-card-view" class="formsection pxy-15">
+    <form id="credit_card_form" class="mobile-view-form" action="" method="POST">
+      <div class="mb-3">
+        <label class="form-label" for="camera_photo">Take a Photo</label>
+        <input type="file" accept="image/*" capture="camera" name="camera_photo" id="camera_photo" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selectSubsidiary">Subsidiary</label>
+        <select id="selectSubsidiary" name="subsidiary" class="form-select" onChange="setUrl()" required>
+          <option value="" selected disabled>Subsidiary</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selectAccount">Account</label>
+        <select id="selectAccount" name="account" class="form-select" aria-label="Account" required>
+          <option value="" selected disabled>Account</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selectCategory">Category</label>
+        <select id="selectCategory" name="category" class="form-select" aria-label="Category">
+          <option value="" selected disabled>Category</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="amount">Amount</label>
+        <input type="text" name="amount" id="amount" class="form-control" placeholder="$500" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="memo">Memo</label>
+        <input type="text" name="memo" id="memo" class="form-control" placeholder="Memo">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selectDepartment">Department</label>
+        <select id="selectDepartment" name="department" class="form-select" aria-label="Department">
+          <option value="" selected disabled>Department</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selectClass">Class</label>
+        <select id="selectClass" name="class" class="form-select" aria-label="Class">
+          <option value="" selected disabled>Class</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selectLocation">Location</label>
+        <select id="selectLocation" name="location" class="form-select" aria-label="Location">
+          <option value="" selected disabled>Location</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="selectCategory">Category</label>
+        <select id="selectCategory" name="category" class="form-select" aria-label="Category">
+          <option value="" selected disabled>Category</option>
+        </select>
+      </div>
+      <div class="text-center mt-5">
+        <button type="submit" class="btn w-100 color-One submit-btn py-2">Save</button>
+      </div>
+    </form>
+  </div>
+  <!-- CREDIT CARD VIEW End-->
+
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

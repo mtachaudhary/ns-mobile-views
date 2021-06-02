@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Font asesome -->
+  <link href="assets/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navbar start -->
+  <div class="header-bg pxy-15 color-One text-light">
+    <a href="index.html" id="menu-toggle" class="text-light">
+      <span class="fas fa-arrow-left"></span>
+    </a>
+    <span id="app-title" class="app-title ms-2">Task</span>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- TASK VIEW Start-->
+  <div id="task-view" class="formsection pxy-15">
+      <form id="task_form" class="mobile-view-form" action="" method="POST">
+        <div class="mb-3">
+          <label class="form-label" for="task_title">Title</label>
+          <input type="text" name="title" id="task_title" class="form-control" placeholder="Title" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="task_priority">Priority</label>
+          <select id="task_priority" class="form-select" name="priority" aria-label="Priority" required>
+            <option value="" selected disabled>Priority</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="task_assigned_to">Assigned To</label>
+          <select id="task_assigned_to" class="form-select" name="assigned_to" aria-label="Assigned To" required>
+            <option value="" selected disabled>Assigned To</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="task_status">Status</label>
+          <select id="task_status" class="form-select" name="status" aria-label="Status" required>
+            <option value="" selected disabled>Status</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="task_email">Email</label>
+          <input type="email" name="email" id="task_email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="task_due_date">Due Date</label>
+          <input type="date" name="due_date" id="task_due_date" class="form-control" placeholder="14-04-2020" required>
+        </div>
+          <div class="text-center mt-5">
+              <button type="submit" class="btn w-100 color-One submit-btn py-2">Save</button>
+          </div>
+      </form>
+  </div>
+  <!-- TASK VIEW End-->
+
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
