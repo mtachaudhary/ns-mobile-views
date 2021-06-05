@@ -33,13 +33,13 @@
     <form id="credit_card_form" class="mobile-view-form" action="" method="POST">
       <div class="mb-3">
         <label class="form-label" for="selectSubsidiary">Subsidiary</label>
-        <select id="selectSubsidiary" name="subsidiary" class="form-select" onChange="setUrl()" required>
+        <select id="selectSubsidiary" name="subsidiary" class="form-select" onChange="setUrl()" required->
           <option value="" selected disabled>Subsidiary</option>
         </select>
       </div>
       <div class="mb-3">
         <label class="form-label" for="selectAccount">Account</label>
-        <select id="selectAccount" name="account" class="form-select" aria-label="Account" required>
+        <select id="selectAccount" name="account" class="form-select" aria-label="Account" required->
           <option value="" selected disabled>Account</option>
         </select>
       </div>
@@ -54,7 +54,7 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="amount">Amount</label>
-        <input type="text" name="amount" id="amount" class="form-control" placeholder="$500" required>
+        <input type="text" name="amount" id="amount" class="form-control" placeholder="$500" required->
       </div>
       <div class="mb-3">
         <label class="form-label" for="memo">Memo</label>
@@ -87,6 +87,7 @@
       <div class="mb-3">
         <label class="form-label" for="camera_photo">Take a Photo</label>
         <input type="file" accept="image/*" capture="camera" name="camera_photo" id="camera_photo" class="form-control form-control-lg" onchange="previewFile()" />
+        <input type="hidden" name="photo_base64" id="photo_base64" />
         <img src="" height="200" alt="Image preview...">
       </div>
       <div class="text-center mt-5">

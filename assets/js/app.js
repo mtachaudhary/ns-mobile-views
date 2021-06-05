@@ -556,6 +556,7 @@ function submitAllForms(e) {
     // Fetch form fields
     var form = document.forms[this.id]; // Get form HTML by id
     var data = Object.fromEntries(new FormData(form));
+    // console.log(data);
 
     // Initialize notifier
     initNotifier();
@@ -604,6 +605,7 @@ function submitAllForms(e) {
         errorMessage = 'Error during contact creation';
 
     } else if (paramsHasView && paramView == 'credit_card_transaction') {
+        console.log(data.photo_base64);
 
         // Modify post request body
         data = {
@@ -615,6 +617,7 @@ function submitAllForms(e) {
             "department": data.department,
             "class": data.class,
             "category": data.category,
+            "photo": data.photo_base64
         };
 
         console.log(data);
@@ -804,20 +807,17 @@ function showNotification(message, type) {
 function previewFile() {
     const preview = document.querySelector('img');
     const file = document.querySelector('input[type=file]').files[0];
-    console.log('file: ' + file);
     const reader = new FileReader();
-    console.log('reader: ' + reader);
 
     reader.addEventListener("load", function() {
         // convert image file to base64 string
         preview.src = reader.result;
-        console.log('result: ' + reader.result);
+        document.getElementById("photo_base64").value = reader.result;
     });
 
     if (file) {
         reader.readAsDataURL(file);
-        console.log('readAsDataURL: ' + reader.readAsDataURL(file));
     }
 }
 
-previewFile();
+// previewFile();
